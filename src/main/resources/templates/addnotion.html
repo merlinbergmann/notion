@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous"/>
+    <title>Create new Notion</title>
+</head>
+<body>
+<a href="/notion">Go back</a>
+
+<form action="#" th:action="@{/add}" th:object="${newNotion}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <input type="text" th:field="*{title}"/>
+    <input type="text" th:field="*{content}"/>
+    <input type="submit" class="btn btn-success" value="Create Notion" />
+</form>
+</body>
+</html>
