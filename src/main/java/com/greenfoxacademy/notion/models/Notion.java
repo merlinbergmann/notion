@@ -7,8 +7,6 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
-@Setter
 @Table(name = "notions_data")
 public class Notion {
 
@@ -30,4 +28,43 @@ public class Notion {
     createDate = LocalDateTime.now();
   }
 
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getContent() {
+    return content;
+  }
+
+  public void setContent(String content) {
+    this.content = content;
+  }
+
+  public int getVoting() {
+    return voting;
+  }
+
+  public void setVoting(int voting) {
+    this.voting = voting;
+  }
+
+  public LocalDateTime getCreateDate() {
+    return createDate;
+  }
+
+  public void setCreateDate(LocalDateTime createDate) {
+    this.createDate = createDate;
+  }
 }
